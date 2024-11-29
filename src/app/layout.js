@@ -35,7 +35,7 @@ export default function RootLayout({ children }) {
       <link rel="shortcut icon" href="/logo.png" type="image/x-icon"/>
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col`} 
       >
         <Navbar />
         {children}
