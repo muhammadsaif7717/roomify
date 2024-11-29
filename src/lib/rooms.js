@@ -1,4 +1,4 @@
-export const rooms=[
+export const rooms = [
     {
         "_id": "665f4d485d8934d1b21e39aa",
         "image": "https://i.postimg.cc/Jz5m6wRD/1791.jpg",
@@ -17,7 +17,7 @@ export const rooms=[
         "apartmentNo": 202,
         "rent": 1400,
         "agreementButton": "Apply",
-        "status": "unavailable"
+        "status": "available"
     },
     {
         "_id": "665f4d485d8934d1b21e39b9",
@@ -37,7 +37,7 @@ export const rooms=[
         "apartmentNo": 603,
         "rent": 2050,
         "agreementButton": "Apply",
-        "status": "unavailable"
+        "status": "available"
     },
     {
         "_id": "665f4d485d8934d1b21e39ac",
@@ -97,7 +97,7 @@ export const rooms=[
         "apartmentNo": 101,
         "rent": 1200,
         "agreementButton": "Apply",
-        "status": "unavailable"
+        "status": "available"
     },
     {
         "_id": "665f4d485d8934d1b21e39ab",
