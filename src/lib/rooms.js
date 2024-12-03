@@ -1,6 +1,5 @@
 export const rooms = [
     {
-        "_id": "665f4d485d8934d1b21e39aa",
         "image": "https://i.postimg.cc/Jz5m6wRD/1791.jpg",
         "floorNo": 1,
         "blockName": "A",
@@ -10,7 +9,6 @@ export const rooms = [
         "status": "available"
     },
     {
-        "_id": "665f4d485d8934d1b21e39ad",
         "image": "https://i.postimg.cc/Rhz3Qk0h/2150895589.jpg",
         "floorNo": 2,
         "blockName": "B",
@@ -20,7 +18,6 @@ export const rooms = [
         "status": "available"
     },
     {
-        "_id": "665f4d485d8934d1b21e39b9",
         "image": "https://i.postimg.cc/s2TH6z12/1800.jpg",
         "floorNo": 6,
         "blockName": "F",
@@ -30,7 +27,6 @@ export const rooms = [
         "status": "available"
     },
     {
-        "_id": "665f4d485d8934d1b21e39ba",
         "image": "https://i.postimg.cc/vTVPZ6h1/2259.jpg",
         "floorNo": 6,
         "blockName": "F",
@@ -40,7 +36,6 @@ export const rooms = [
         "status": "available"
     },
     {
-        "_id": "665f4d485d8934d1b21e39ac",
         "image": "https://i.postimg.cc/t493HxpJ/2150895578.jpg",
         "floorNo": 2,
         "blockName": "B",
@@ -50,7 +45,6 @@ export const rooms = [
         "status": "available"
     },
     {
-        "_id": "665f4d485d8934d1b21e39b2",
         "image": "https://i.postimg.cc/DzKth5ms/6282.jpg",
         "floorNo": 4,
         "blockName": "D",
@@ -60,7 +54,6 @@ export const rooms = [
         "status": "available"
     },
     {
-        "_id": "665f4d485d8934d1b21e39b4",
         "image": "https://i.postimg.cc/kMQrj04C/2148285503.jpg",
         "floorNo": 4,
         "blockName": "D",
@@ -70,7 +63,6 @@ export const rooms = [
         "status": "available"
     },
     {
-        "_id": "665f4d485d8934d1b21e39b6",
         "image": "https://i.postimg.cc/t7GV90ZQ/17926.jpg",
         "floorNo": 5,
         "blockName": "E",
@@ -80,7 +72,6 @@ export const rooms = [
         "status": "available"
     },
     {
-        "_id": "665f4d485d8934d1b21e39b7",
         "image": "https://i.postimg.cc/WpCCcs8F/12078.jpg",
         "floorNo": 5,
         "blockName": "E",
@@ -90,7 +81,6 @@ export const rooms = [
         "status": "available"
     },
     {
-        "_id": "665f4d485d8934d1b21e39a9",
         "image": "https://i.postimg.cc/bNbqnDMR/2150895587-1.jpg",
         "floorNo": 1,
         "blockName": "A",
@@ -100,7 +90,6 @@ export const rooms = [
         "status": "available"
     },
     {
-        "_id": "665f4d485d8934d1b21e39ab",
         "image": "https://i.postimg.cc/G2HCmHGG/2000.jpg",
         "floorNo": 1,
         "blockName": "A",
@@ -110,7 +99,6 @@ export const rooms = [
         "status": "available"
     },
     {
-        "_id": "665f4d485d8934d1b21e39ae",
         "image": "https://i.postimg.cc/N03LB3mD/2150895575.jpg",
         "floorNo": 2,
         "blockName": "B",
@@ -120,7 +108,6 @@ export const rooms = [
         "status": "available"
     },
     {
-        "_id": "665f4d485d8934d1b21e39af",
         "image": "https://i.postimg.cc/jSCjNxhv/2301.jpg",
         "floorNo": 3,
         "blockName": "C",
@@ -130,7 +117,6 @@ export const rooms = [
         "status": "available"
     },
     {
-        "_id": "665f4d485d8934d1b21e39b0",
         "image": "https://i.postimg.cc/ydh6BkV6/12375.jpg",
         "floorNo": 3,
         "blockName": "C",
@@ -140,7 +126,6 @@ export const rooms = [
         "status": "available"
     },
     {
-        "_id": "665f4d485d8934d1b21e39b1",
         "image": "https://i.postimg.cc/t493HxpJ/2150895578.jpg",
         "floorNo": 3,
         "blockName": "C",
@@ -150,7 +135,6 @@ export const rooms = [
         "status": "available"
     },
     {
-        "_id": "665f4d485d8934d1b21e39b5",
         "image": "https://i.postimg.cc/8c668kCm/3034.jpg",
         "floorNo": 5,
         "blockName": "E",
@@ -160,7 +144,6 @@ export const rooms = [
         "status": "available"
     },
     {
-        "_id": "665f4d485d8934d1b21e39b3",
         "image": "https://i.postimg.cc/nzW2FcT5/2149871181.jpg",
         "floorNo": 4,
         "blockName": "D",
@@ -170,7 +153,6 @@ export const rooms = [
         "status": "available"
     },
     {
-        "_id": "665f4d485d8934d1b21e39b8",
         "image": "https://i.postimg.cc/W16HZgvg/12374.jpg",
         "floorNo": 6,
         "blockName": "F",

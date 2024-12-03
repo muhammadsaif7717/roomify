@@ -4,22 +4,29 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
-const FeaturedRooms = () => {
+const RoomsPage = () => {
     const [rooms, setRooms] = useState([]);
     const [loading, setLoading] = useState(true);
-
+    const [sortedRooms, setSortedRooms] = useState([]);
+    const [sortOrder, setSortOrder] = useState("lowToHigh");
 
     useEffect(() => {
         const fetchData = async () => {
             const fetchedRooms = await getAllRooms();
-            const minRent = Math.min(...fetchedRooms.map((room) => room.rent));
-            const featuredRooms = fetchedRooms.filter((room) => room.rent > minRent).slice(0, 6);
-            setRooms(featuredRooms);
+            setRooms(fetchedRooms);
+            setSortedRooms(fetchedRooms); // Initialize sortedRooms
             setLoading(false)
         };
         fetchData();
     }, []);
 
+    // Sort rooms when sortOrder changes
+    useEffect(() => {
+        const sorted = [...rooms].sort((a, b) =>
+            sortOrder === "lowToHigh" ? a.rent - b.rent : b.rent - a.rent
+        );
+        setSortedRooms(sorted);
+    }, [sortOrder, rooms]);
 
 
     if (loading) {
@@ -31,14 +38,36 @@ const FeaturedRooms = () => {
     }
 
     return (
-        <div>
+        <div className="pt-16">
             {!loading && <div className="min-h-screen max-w-screen-2xl mx-auto flex flex-col items-center justify-center my-10">
-                <h1 className="text-3xl font-bold mb-6">Featured Rooms</h1>
+                <h1 className="text-3xl font-bold mb-6">All Rooms</h1>
+
+                {/* Sorting Buttons */}
+                <div className="flex space-x-4 mb-6">
+                    <button
+                        onClick={() => setSortOrder("lowToHigh")}
+                        className={`px-4 py-2 text-sm font-medium rounded ${sortOrder === "lowToHigh"
+                            ? "bg-blue-500 text-white"
+                            : "bg-gray-200 text-gray-800"
+                            }`}
+                    >
+                        Rent: Low to High
+                    </button>
+                    <button
+                        onClick={() => setSortOrder("highToLow")}
+                        className={`px-4 py-2 text-sm font-medium rounded ${sortOrder === "highToLow"
+                            ? "bg-blue-500 text-white"
+                            : "bg-gray-200 text-gray-800"
+                            }`}
+                    >
+                        Rent: High to Low
+                    </button>
+                </div>
 
                 {/* Rooms Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-center p-5 lg:p-0 gap-5">
                     {
-                        rooms.map((room) => (
+                        sortedRooms.map((room) => (
                             <div
                                 key={room._id}
                                 className="p-5 border border-gray-300 rounded shadow hover:shadow-lg transition"
@@ -74,12 +103,9 @@ const FeaturedRooms = () => {
                         ))
                     }
                 </div>
-                <div className="mt-10">
-                    <Link href={`/rooms`} className="btn btn-primary bg-blue-500 border-none text-white hover:bg-blue-600">Show more...</Link>
-                </div>
             </div>}
         </div>
     );
 };
 
-export default FeaturedRooms;
+export default RoomsPage;

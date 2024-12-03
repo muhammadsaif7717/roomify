@@ -6,7 +6,10 @@ export const GET = async () => {
         const db = await connectDb();
         const roomsCollection = db.collection('rooms');
         const res = await roomsCollection.find().toArray();
-        return NextResponse.json(res); 
+        return NextResponse.json(
+            { message: 'Get successfull', res: res },
+            { status: 200 }
+        );
     } catch (error) {
         console.error("Error fetching rooms:", error);
         return NextResponse.json(
