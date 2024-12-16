@@ -43,32 +43,25 @@ const FeaturedRooms = () => {
                                 key={room._id}
                                 className="p-5 border border-gray-300 rounded shadow hover:shadow-lg transition"
                             >
-                                <Image
-                                    height={1080}
-                                    width={1080}
-                                    src={room.image}
-                                    alt={`Room ${room.apartmentNo}`}
-                                    className="w-full h-40 object-cover rounded mb-4"
-                                />
-                                <h2 className="text-lg font-semibold text-gray-800 mb-2">
-                                    Block {room.blockName}, Apartment {room.apartmentNo}
-                                </h2>
-                                <p className="text-sm text-gray-600 mb-1">Floor No: {room.floorNo}</p>
-                                <p className="text-sm text-gray-600 mb-1">Rent: ${room.rent}</p>
-                                <p
-                                    className={`text-sm font-semibold mb-2 ${room.status === "available" ? "text-green-600" : "text-red-600"
-                                        }`}
-                                >
-                                    Status: {room.status}
-                                </p>
-                                <Link href={`/room-details/${room._id}`}
-                                    className={`px-4 py-2 text-sm font-medium text-white rounded ${room.status === "available"
-                                        ? "bg-blue-500 hover:bg-blue-600"
-                                        : "bg-gray-400 cursor-not-allowed"
-                                        }`}
-                                    disabled={room.status !== "available"}
-                                >
-                                    {room.agreementButton}
+                                <Link href={`/room-details/${room._id}`}>
+                                    <Image
+                                        height={1080}
+                                        width={1080}
+                                        src={room.image}
+                                        alt={`Room ${room.apartmentNo}`}
+                                        className="w-full h-40 object-cover rounded mb-4"
+                                    />
+                                    <h2 className="text-lg font-semibold text-gray-800 mb-2">
+                                        Block {room.blockName}, Apartment {room.apartmentNo}
+                                    </h2>
+                                    <p className="text-sm text-gray-600 mb-1">Floor No: {room.floorNo}</p>
+                                    <p className="text-sm text-gray-600 mb-1">Rent: ${room.rent}</p>
+                                    <p
+                                        className={`text-sm font-semibold mb-2 ${room.status === "available" ? "text-green-600" : "text-red-600"
+                                            }`}
+                                    >
+                                        Status: {room.status}
+                                    </p>
                                 </Link>
                             </div>
                         ))

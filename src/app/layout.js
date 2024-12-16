@@ -32,10 +32,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" data-theme='light'>
       <head>
-      <link rel="shortcut icon" href="/logo.png" type="image/x-icon"/>
+        <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col`} 
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col`}
       >
         <Navbar />
         {children}
